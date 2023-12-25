@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>اداره الطلبات</title>
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+
+    <body>
+        <!-- navbar -->
+        <div class="navbar">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-logo">
+                    <h1>اداره الطلبات</h1>
+                </div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span class="span_1"></span>
+                    <span class="span_2"></span>
+                    <span class="span_3"></span>
+                </label>
+            </div>
+
+            <div class="nav-links">
+                <a href="./Edit_account.html">تعديل حساب</a>
+                <a href="./logIn.html">تسجيل خروج</a>
+            </div>
+        </div>
+
+<section class="nav_sidebar">
+    <ul class="nav_sidebar_links">
+        <li> <a  href="./Staff_management.html">اداره الموظفين</a> </li>
+        <li> <a href="./Drivers_management.html">اداره السائقين</a> </li>
+        <li> <a class="active" href="./Order_management.html">اداره الطلبات</a> </li>
+        <li> <a href="./Store_Management.html">اداره المخازن</a> </li>
+        <li> <a href="./Customer_evaluation.html">تقييم العملاء</a> </li>
+        <li> <a href="./Reports.html">التقارير</a> </li>
+    </ul>
+</section>
+
+
+
+<div class="staff order">
+<div class="container">
+
+<div class="row">
+<div class="col-lg-3">
+
+</div>
+
+<div class="col-lg-9">
+
+
+<div class="add_staff" id="form_adding_order">
+
+
+        <h2 id="open_form_adding">أضف طلب</h2>
+
+        <div class="form_adding" id="form_adding">
+
+
+<div class="timeing">
+<h3>حدد الوقت</h3>
+
+<input class="date" type="date" placeholder="dat">
+
+<h4 id="open_order_table"> اكمل الطلب </h4>
+
+</div>
+
+<div class="table_order">
+<table class="table" id="table">
+    <thead>
+        <tr>
+            <th scope="col">السائق</th>
+            <th scope="col">7 - 9</th>
+            <th scope="col">9 - 11</th>
+            <th scope="col">11 - 1</th>
+            <th scope="col">1 - 3</th>
+            <th scope="col">3 - 5</th>
+            <th scope="col">5 - 7</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">محمد</th>
+
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                </div>
+            </td>
+
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                </div>
+            </td>
+
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                </div>
+            </td>
+
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                </div>
+            </td>
+
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                </div>
+            </td>
+
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                </div>
+            </td>
+
+    </tr>
+
+    <tr>
+        <th scope="row">سعيد</th>
+    
+        <td>
+                <div class="form-check Disabled">
+                    <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled" disabled>
+                </div>
+        </td>
+    
+    
+        <td>
+                <div class="form-check Disabled">
+                    <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled" disabled>
+                </div>
+        </td>
+    
+        <td>
+                <div class="form-check Disabled">
+                    <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled" disabled>
+                </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+    </tr>
+
+    <tr>
+        <th scope="row">احمد</th>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+    </tr>
+
+    <tr>
+        <th scope="row">فاروق</th>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+    </tr>
+
+    <tr>
+        <th scope="row">خالد</th>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+    </tr>
+
+    <tr>
+        <th scope="row">سيد</th>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+    </tr>
+
+    <tr>
+        <th scope="row">شاهين</th>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+    </tr>
+
+    <tr>
+        <th scope="row">شريف</th>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+    
+        <td>
+                <div class="form-check Disabled">
+                    <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled" disabled>
+                </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+                <div class="form-check Disabled">
+                    <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled" disabled>
+                </div>
+        </td>
+    
+    </tr>
+
+
+    <tr>
+        <th scope="row">سعدالله</th>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+    </tr>
+
+    <tr>
+        <th scope="row">ابو دنيا</th>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+    </tr>
+
+    <tr>
+        <th scope="row">امجد</th>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+        <td>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+    
+                </label>
+            </div>
+        </td>
+    
+    </tr>
+
+    </tbody>
+</table>
+
+
+<h4 id="open_order_form"> اكمل الطلب </h4>
+
+</div>
+
+
+
+
+
+<form action="" class="Login_form order_form" id="order_form">
+    <h3>املاء البيانات</h3>
+    <input type="text" placeholder="اسم العميل">
+    <input type="number" placeholder="رقم الهاتف">
+    <input type="text" placeholder="العنوان بالتفصيل">
+    <textarea name="" id="" cols="30" placeholder="بيانات الطلب" rows="3"></textarea>
+    <textarea name="" id="" cols="30" placeholder="ملاحظات" rows="3"></textarea>
+
+    <input type="number" placeholder="مبلغ التحصيل">
+
+    <div class="butt">
+        <button class="">أضف</button>
+        <span id="GitBack" class="">رجوع</span>
+    </div>
+
+</form>
+
+
+
+
+
+</div>
+</div>
+
+
+
+<table class="table">
+<thead>
+<tr>
+<th scope="col">Id</th>
+<th scope="col">اسم العميل</th>
+<th scope="col">رقم الهاتف</th>
+<th scope="col">حاله الطلب </th>
+<th scope="col">تاريخ الطلب</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">1</th>
+<td>محمد</td>
+<td>01025463258</td>
+<td>تم الشحن</td>
+<td> 2024/1/5 </td>
+<td class="Edit"> <button onclick="open_edit_box()">تعديل</button> </td>
+<td class="delete"> <button>مسح</button> </td>
+</tr>
+<tr>
+<th scope="row">2</th>
+<td>احمد</td>
+<td>01025463258</td>
+<td>تم الشحن</td>
+<td> 2024/1/5 </td>
+<td class="Edit"><button onclick="open_edit_box()">تعديل</button> </td>
+<td class="delete"> <button>مسح</button> </td>
+</tr>
+<tr>
+<th scope="row">3</th>
+<td>محمود</td>
+<td>01025463258</td>
+<td>تم الشحن</td>
+<td> 2024/1/5 </td>
+<td class="Edit"><button onclick="open_edit_box()">تعديل</button> </td>
+<td class="delete"><button>مسح</button></td>
+</tr>
+
+<tr>
+<th scope="row">4</th>
+<td>سيد</td>
+<td>01025463258</td>
+<td>تم الشحن</td>
+<td> 2024/1/5 </td>
+<td class="Edit"><button onclick="open_edit_box()">تعديل</button> </td>
+<td class="delete"> <button>مسح</button> </td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div class="edit_table" id="edit_table">
+<form action="" class="Login_form order_form edit_table_form" id="order_form">
+        <div onclick="close_edit_box()" class="close" id="close">
+            <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+    <h3>تعديل البيانات</h3>
+    <input type="text" placeholder="اسم العميل">
+    <input type="number" placeholder="رقم الهاتف">
+    <input type="text" placeholder="العنوان بالتفصيل">
+    <textarea name="" id="" cols="30" placeholder="بيانات الطلب" rows="3"></textarea>
+    <textarea name="" id="" cols="30" placeholder="ملاحظات" rows="3"></textarea>
+
+    <input type="number" placeholder="مبلغ التحصيل">
+
+    <div class="butt">
+        <button class="">تعديل</button>
+    </div>
+
+</form>
+    
+</div>
+
+
+        <!-- scroll up -->
+        <span class="scroll_up"><i class="fa-solid fa-arrow-up"></i></span>
+
+
+
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="./js/owl.carousel.min.js"></script>
+        <script src="./js/all.min.js"></script>
+        <script src="./js/bootstrap.bundle.min.js"></script>
+        <script src="./js/main.js"></script>
+
+
+    </body>
+
+</html>
