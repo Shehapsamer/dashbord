@@ -6,14 +6,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;500;600;700;800&display=swap');
 
 :root {
-  --main_bgColor: #1D1D1D;
+  --main_bgColor: #fff;
   --btnColor: #c8f31db6;
   --textColor: #040f21;
-  --Secondary-color: rgba(4, 10, 13, 0.584);  
+  --Secondary-color: #f7f7f7;  
   --bgColor: #f7f7f7;
   --pragrafColor: #8e8d8d;
-  --body_bgColor: #ffffff;
-  --main_borderColor: 1px solid rgba(212, 212, 212, 0.125);
+  --body_bgColor: #040f21;
+  --main_borderColor: 1px solid rgba(0, 0, 0, 0.125);
 }
 ::selection {
   color: rgb(0, 0, 0);
@@ -96,7 +96,7 @@ p{
 .navbar  .nav-header  .nav-logo {
   display: inline-block;
   font-size: 22px;
-  color: #fff;
+  color: #000;
   margin-right: 300px;
   width: 100%;
 
@@ -119,7 +119,7 @@ p{
   display: inline-block;
   padding: 13px 10px 13px 10px;
   text-decoration: none;
-  color: #efefef;
+  color: #000;
   transition: all ease-in .3s;
   cursor: pointer;
 }
@@ -347,7 +347,7 @@ p{
   height: 40px;
   margin: 10px 0;
   background-color: var(--Secondary-color);
-  color: var(--body_bgColor);
+  color: var(--textColor);
   padding-right: 10px;
 }
 .Login_form input::placeholder , .Login_form textarea::placeholder{
@@ -359,14 +359,14 @@ p{
   border: var(--main_borderColor);
   margin: 10px 0;
   background-color: var(--Secondary-color);
-  color: var(--body_bgColor);
+  color: var(--textColor);
   padding-right: 10px;
 }
 .Login_form option{
-  color: var(--body_bgColor);
+  color: var(--textColor);
 }
 .Login_form label{
-  color: var(--bgColor);
+  color: var(--textColor);
   margin-top: 30px;
 }
 .Login_form button{
