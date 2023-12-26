@@ -31,7 +31,11 @@
             </div>
         </div>
 
-<section class="nav_sidebar">
+
+            <div class="toglle_menu" id="toglle_menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+<section class="nav_sidebar" id="nav_sidebar">
 <ul class="nav_sidebar_links">
     <li> <a href="./Staff_management.html">اداره الموظفين</a> </li>
     <li> <a href="./Drivers_management.html">اداره السائقين</a> </li>
@@ -86,57 +90,60 @@
                             </div>
                         </div>
 
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Id</th>
-                                    <th scope="col">الاسم</th>
-                                    <th scope="col">رقم الهاتف</th>
-                                    <th scope="col">نوع العربه</th>
-                                    <th scope="col">البريد</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>محمد</td>
-                                    <td>01025463258</td>
-                                    <td>نصف نقل</td>
-                                    <td>mr.ssaaaa@gmail.com</td>
-                                    <td class="Edit"> <button>تعديل</button> </td>
-                                    <td class="delete"> <button>مسح</button> </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>احمد</td>
-                                    <td>01025463258</td>
-                                    <td>نصف نقل</td>
-                                    <td>mr.ssaaaa@gmail.com</td>
-                                    <td class="Edit"><button>تعديل</button> </td>
-                                    <td class="delete"> <button>مسح</button> </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>محمود</td>
-                                    <td>01025463258</td>
-                                    <td>نصف نقل</td>
-                                    <td>mr.ssaaaa@gmail.com</td>
-                                    <td class="Edit"><button>تعديل</button> </td>
-                                    <td class="delete"><button>مسح</button></td>
-                                </tr>
+<div class="table_container">
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">الاسم</th>
+            <th scope="col">رقم الهاتف</th>
+            <th scope="col">نوع العربه</th>
+            <th scope="col">البريد</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>محمد</td>
+            <td>01025463258</td>
+            <td>نصف نقل</td>
+            <td>mr.ssaaaa@gmail.com</td>
+            <td class="Edit"> <button>تعديل</button> </td>
+            <td class="delete"> <button>مسح</button> </td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>احمد</td>
+            <td>01025463258</td>
+            <td>نصف نقل</td>
+            <td>mr.ssaaaa@gmail.com</td>
+            <td class="Edit"><button>تعديل</button> </td>
+            <td class="delete"> <button>مسح</button> </td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>محمود</td>
+            <td>01025463258</td>
+            <td>نصف نقل</td>
+            <td>mr.ssaaaa@gmail.com</td>
+            <td class="Edit"><button>تعديل</button> </td>
+            <td class="delete"><button>مسح</button></td>
+        </tr>
 
-                                <tr>
-                                    <th scope="row">4</th>
-                                    <td>سيد</td>
-                                    <td>01025463258</td>
-                                    <td>نصف نقل</td>
-                                    <td>mr.ssaaaa@gmail.com</td>
-                                    <td class="Edit"><button>تعديل</button> </td>
-                                    <td class="delete"> <button>مسح</button> </td>
-                                </tr>
+        <tr>
+            <th scope="row">4</th>
+            <td>سيد</td>
+            <td>01025463258</td>
+            <td>نصف نقل</td>
+            <td>mr.ssaaaa@gmail.com</td>
+            <td class="Edit"><button>تعديل</button> </td>
+            <td class="delete"> <button>مسح</button> </td>
+        </tr>
 
-                            </tbody>
-                        </table>
+    </tbody>
+</table>   
+</div>
+
                     </div>
 
                 </div>
@@ -147,6 +154,15 @@
 
         <!-- scroll up -->
         <span class="scroll_up"><i class="fa-solid fa-arrow-up"></i></span>
+
+
+<div id="open_order_table" class="d-none">
+
+    <div id="open_order_form" class="d-none"></div>
+    <div id="GitBack" class="d-none"></div>
+    <div id="form_adding_order" class="d-none"></div>
+
+</div>
 
 
 

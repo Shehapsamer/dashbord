@@ -25,6 +25,14 @@ GitBack.addEventListener("click", function () {
     form_adding_Switch.classList.remove("order_form_Show")
 })
 
+let toglle_menu = document.getElementById("toglle_menu");
+let nav_sidebar = document.getElementById("nav_sidebar");
+
+toglle_menu.addEventListener("click", function () {
+    nav_sidebar.classList.toggle("open_nav_sidebar")
+})
+
+
 
 function open_edit_box  () {
     let edit_table = document.getElementById("edit_table");
@@ -36,3 +44,5 @@ function close_edit_box  () {
     let edit_table = document.getElementById("edit_table");
     edit_table.classList.remove("edit_table_show")
 }
+
+
