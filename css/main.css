@@ -2,14 +2,13 @@
 @import url(./bootstrap.min.css.map);
 @import url(./all.min.css);
 @import url(./owl.carousel.min.css);
-@import url(./animate.css);
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;500;600;700;800&display=swap');
 
 :root {
   --main_bgColor: #fff;
-  --btnColor: #17A2B8;
+  --btnColor: #4e73df;
   --textColor: #040f21;
-  --Secondary-color: #f7f7f7;  
+  --Secondary-color: #4e73df;  
   --bgColor: #f7f7f7;
   --pragrafColor: #8e8d8d;
   --body_bgColor: #040f21;
@@ -17,8 +16,7 @@
 }
 ::selection {
   color: rgb(255, 255, 255);
-  background: var(--btnColor);
-  border-radius: 5px !important;
+  background: var(--body_bgColor);
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -62,7 +60,7 @@ body{
     font-family: 'Cairo', sans-serif;
 }
 a{
-    text-decoration: none;
+    text-decoration: none !important;
 }
 li{
     list-style: none;
@@ -85,22 +83,27 @@ p{
   padding: 0 5%;  
   display: flex;
   align-items: center;
-  z-index: 92212554454554541212;
+  z-index: 12;
+  transition: all ease-in .3s;
 }
 
 .navbar  .nav-header {
   width: 20%;
-
+  
 }
 
 .navbar  .nav-header  .nav-logo {
   display: inline-block;
   font-size: 22px;
   color: #000;
-  margin-right: 300px;
   width: 100%;
-
+  margin-right: 200px ;
 }
+.nav-logo-h1{
+  margin-right: 100px !important;
+}
+
+
 .navbar .nav-header .nav-logo h1{
   font-size: 28px;
 }
@@ -180,6 +183,8 @@ p{
 .services_menu li a:hover {
   color: var(--btnColor) !important;
 }
+
+
 
 .fix {
   background-color: var(--Secondary-color);
@@ -290,7 +295,7 @@ p{
   display: none;
   }
 .navbar .nav-header .nav-logo {
-  margin-right: 20px;
+  margin-right: 20px !important;
 }
 
 
@@ -300,32 +305,75 @@ p{
   right: 0;
   top: 0;
   bottom: 0;
-  width: 300px;
+  width: 200px;
   background-color: var(--Secondary-color);
   z-index: 80000000000000000000000000008;
+  overflow-y: scroll;
 }
+.nav_sidebar::-webkit-scrollbar{
+  width: 1px !important;
+}
+.admin_img {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.admin_img img {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  text-align: center;
+  border-radius: 50%;
+}
+.admin_img h6{
+  color: var(--main_bgColor);
+  margin-top: 10px;
+}
+
+.nav_sidebar .collapse a {
+  margin: 3px 0 !important;
+  color: var(--textColor) !important;
+  transition: all ease-in .0s;
+}
+
+
 .nav_sidebar_links{
   margin-top: 30px;
 }
-.nav_sidebar_links a{
+.nav_sidebar_links li{
   margin: 20px 0;
+
+}
+.nav_sidebar_links a{
   text-align: center;
   padding: 10px 0;
   border-radius: 5px;
   border: var(--main_borderColor);
   display: block;
+  color: var(--main_bgColor);
+  transition: all ease-in .3s;
+  background-color: transparent ;
+}
+.nav_sidebar_links li a:hover{
+  background-color: var(--bgColor);
+  box-shadow: 1px 1px 5px 1px #ffffff55;
+  transform: translateY(-10px) ;
   color: var(--body_bgColor);
   transition: all ease-in .3s;
 }
-.nav_sidebar_links li a:hover{
-  background-color: var(--btnColor);
-  box-shadow: 1px 1px 5px 1px #ffffff55;
-  transform: translateY(-10px) ;
+
+.collapse_container svg{
+  margin-right: 10px;
+  transition: all ease-in .3s;
+}
+.collapse_container:hover svg{
+  transform: rotate(-90deg);
 }
 .nav_sidebar_links .active{
-  background-color: var(--btnColor);
+  background-color: var(--bgColor);
   box-shadow: 1px 1px 5px 1px #ffffff55;
   transform: translateY(-10px);
+  color: var(--textColor);
 }
 
 /* form */
@@ -347,7 +395,7 @@ p{
   border: var(--main_borderColor);
   height: 40px;
   margin: 10px 0;
-  background-color: var(--Secondary-color);
+  background-color: var(--bgColor);
   color: var(--textColor);
   padding-right: 10px;
 }
@@ -359,7 +407,7 @@ p{
   border-radius: 5px;
   border: var(--main_borderColor);
   margin: 10px 0;
-  background-color: var(--Secondary-color);
+  background-color: var(--bgColor);
   color: var(--textColor);
   padding-right: 10px;
 }
@@ -430,7 +478,7 @@ p{
 .timeing input{
   margin: 10px 0;
   color: var(--body_bgColor);
-  background-color: var(--btnColor);
+  background-color: var(--bgColor );
   cursor: pointer;
 }
 .timeing label{
@@ -454,6 +502,9 @@ p{
   border-radius: 5px;
   margin-top: 30px;
   cursor: pointer;
+  width: 50%;
+  margin-top: 40px;
+  margin-left: auto;
 }
 
 .add_staff h3{
@@ -468,7 +519,9 @@ p{
   opacity: .5;
   cursor: not-allowed;
 }
-
+.disabled .form-check-input {
+  border: 3px solid red !important;
+}
 
 .order_form{
   display: none;
@@ -512,6 +565,12 @@ p{
 .table_order .Disabled {
   cursor: not-allowed;
 }
+
+.table_order .Disabled  .form-check-input{
+  border: 3px solid red;
+}
+
+
 .date{
   width: 100% !important;
   height: 40px !important; 
@@ -550,6 +609,9 @@ p{
 .edit_table_show{
   height: 100vh !important;
 }
+.close{
+  cursor: pointer;
+}
 .close svg{
   font-size: 30px;
   
@@ -570,14 +632,15 @@ p{
     }
 
 .navbar .nav-header .nav-logo {
-  margin-right: 50px;
+  margin-right: 50px !important;
 }
+
  }
 
 
  @media screen and (min-width:768px) and (max-width:1023px){
-.navbar .nav-header .nav-logo  {
-    margin-right: 70px !important;
+.navbar .nav-header .nav-logo {
+    margin-right: 60px !important;
   }
  }
 
@@ -613,7 +676,7 @@ p{
 .Home{
   width: 100%;
   overflow: hidden;
-  padding-top: 70px;
+  padding-top: 30px;
   padding-left: 5%;
 }
 .firsty{
@@ -696,7 +759,7 @@ p{
   display: block;
   margin: auto;
   height: 40px;
-  background-color: var(--btnColor);
+  background-color: var(--bgColor);
   border-radius: 5px;
   padding: 0 20px;
   margin-bottom: 30px;
@@ -734,10 +797,10 @@ p{
   }
   .toglle_menu svg{
     font-size: 30px;
-
+    color: var(--bgColor);
   }
 .open_nav_sidebar{
-  width: 300px !important;
+  width: 200px !important;
   z-index: 12212121;
 }
 .navbar>.nav-btn>label{
@@ -745,6 +808,7 @@ p{
   border-radius: 5px;
 
 }
+
 .firsty .box{
   margin: 20px 0;
 }
@@ -757,5 +821,54 @@ p{
 .Show {
   height: 700px !important;
 }
+.Home {
+  padding-right: 5%;
+}
+}
 
+ @media screen and (min-width:1px) and (max-width:1200px) {
+  .Home{
+    padding-right: 5%;
+  }
+ }
+
+
+
+.S3_home{
+  padding: 70px 0;
+}
+.Graph{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+.Graph .card{
+  height: 100%;
+  width: 100%;
+}
+.Graph .card canvas{
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  height: 5000px;
+}
+.dropdown-toggle{
+  color: var(--body_bgColor) !important;
+}
+
+
+table,
+th,
+td {
+  border: 1px solid var(--pragrafColor) !important;
+  vertical-align:middle;
+  text-align: center;
+
+}
+table{
+  padding: 0 20px !important;
+  border-radius: 5px ;
 }

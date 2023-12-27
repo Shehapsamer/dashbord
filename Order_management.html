@@ -9,40 +9,70 @@
     </head>
 
     <body>
-        <!-- navbar -->
-        <div class="navbar">
-            <input type="checkbox" id="nav-check">
-            <div class="nav-header">
-                <div class="nav-logo">
-                    <h1>اداره الطلبات</h1>
-                </div>
-            </div>
-            <div class="nav-btn">
-                <label for="nav-check">
-                    <span class="span_1"></span>
-                    <span class="span_2"></span>
-                    <span class="span_3"></span>
-                </label>
-            </div>
-
-            <div class="nav-links">
-                <a href="./Edit_account.html">تعديل حساب</a>
-                <a href="./logIn.html">تسجيل خروج</a>
-            </div>
+<!-- navbar -->
+<div class="navbar">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+        <div class="nav-logo">
+            <h1 class="">الاحصائيات</h1>
         </div>
+    </div>
+    <div class="nav-btn">
+        <label for="nav-check">
+            <span class="span_1"></span>
+            <span class="span_2"></span>
+            <span class="span_3"></span>
+        </label>
+    </div>
+
+    <div class="nav-links">
 
 
-            <div class="toglle_menu" id="toglle_menu">
-                <i class="fa-solid fa-bars"></i>
-            </div>
+
+        <a href="./Edit_account.html">تعديل حساب</a>
+        <a href="./logIn.html">تسجيل خروج</a>
+
+    </div>
+</div>
+
+<!-- Sidebar menu -->
+<div class="toglle_menu" id="toglle_menu">
+    <i class="fa-solid fa-bars"></i>
+</div>
 <section class="nav_sidebar" id="nav_sidebar">
+
+    <li class="admin_img">
+        <img src="./img/user.jpeg" alt="">
+        <h6>MR.ahmed@gmail.com</h6>
+    </li>
+
+
     <ul class="nav_sidebar_links">
-        <li> <a  href="./Staff_management.html">اداره الموظفين</a> </li>
+
+        <li> <a href="./Staff_management.html">اداره الموظفين</a> </li>
         <li> <a href="./Drivers_management.html">اداره السائقين</a> </li>
         <li> <a class="active" href="./Order_management.html">اداره الطلبات</a> </li>
         <li> <a href="./Store_Management.html">اداره المخازن</a> </li>
+        <li class="collapse_container">
+            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                aria-expanded="false" aria-controls="collapseExample">
+                المذيد عننا
+                <i class="fa-solid fa-angle-left"></i>
+
+            </a>
+
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <a href="./index.html">جميع الطلبات</a>
+                    <a href="./index.html">جميع الطلبات</a>
+                    <a href="./index.html">جميع الطلبات</a>
+                </div>
+            </div>
+        </li>
         <li> <a href="./Customer_evaluation.html">تقييم العملاء</a> </li>
         <li> <a href="./Reports.html">التقارير</a> </li>
+
+
     </ul>
 </section>
 
@@ -52,11 +82,11 @@
 <div class="container">
 
 <div class="row">
-<div class="col-lg-3">
+<div class="col-lg-2">
 
 </div>
 
-<div class="col-lg-9">
+<div class="col-lg-10">
 
 
 <div class="add_staff" id="form_adding_order">
@@ -70,7 +100,8 @@
 <div class="timeing">
 <h3>حدد الوقت</h3>
 
-<input class="date" type="date" placeholder="dat">
+<input class="slecte_date" type="date" value="2023-12-27">
+
 
 <h4 id="open_order_table"> اكمل الطلب </h4>
 

@@ -12,7 +12,7 @@
     <input type="checkbox" id="nav-check">
     <div class="nav-header">
         <div class="nav-logo">
-            <h1>اداره الموظفين</h1>
+            <h1 class="">الاحصائيات</h1>
         </div>
     </div>
     <div class="nav-btn">
@@ -24,37 +24,66 @@
     </div>
 
     <div class="nav-links">
+
+
+
         <a href="./Edit_account.html">تعديل حساب</a>
         <a href="./logIn.html">تسجيل خروج</a>
+
     </div>
 </div>
 
+<!-- Sidebar menu -->
+<div class="toglle_menu" id="toglle_menu">
+    <i class="fa-solid fa-bars"></i>
+</div>
+<section class="nav_sidebar" id="nav_sidebar">
 
-    <div class="toglle_menu" id="toglle_menu">
-        <i class="fa-solid fa-bars"></i>
-    </div>
-<section class="nav_sidebar" id="nav_sidebar"> 
+    <li class="admin_img">
+        <img src="./img/user.jpeg" alt="">
+        <h6>MR.ahmed@gmail.com</h6>
+    </li>
+
+
     <ul class="nav_sidebar_links">
+
         <li> <a class="active" href="./Staff_management.html">اداره الموظفين</a> </li>
         <li> <a href="./Drivers_management.html">اداره السائقين</a> </li>
         <li> <a href="./Order_management.html">اداره الطلبات</a> </li>
         <li> <a href="./Store_Management.html">اداره المخازن</a> </li>
+        <li class="collapse_container">
+            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                aria-expanded="false" aria-controls="collapseExample">
+                المذيد عننا
+                <i class="fa-solid fa-angle-left"></i>
+
+            </a>
+
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <a href="./index.html">جميع الطلبات</a>
+                    <a href="./index.html">جميع الطلبات</a>
+                    <a href="./index.html">جميع الطلبات</a>
+                </div>
+            </div>
+        </li>
         <li> <a href="./Customer_evaluation.html">تقييم العملاء</a> </li>
         <li> <a href="./Reports.html">التقارير</a> </li>
+
+
     </ul>
 </section>
-
 
 <div class="staff">
 <div class="container">
 
 
     <div class="row">
-        <div class="col-lg-3">
+        <div class="col-lg-2">
 
         </div>
 
-<div class="col-lg-9">
+<div class="col-lg-10">
     <div class="add_staff">
             <h2 id="open_form_adding">اضف موظف</h2>
 
