@@ -852,9 +852,7 @@ p{
   width: 100%;
 }
 
-body{
-  height: 5000px;
-}
+
 .dropdown-toggle{
   color: var(--body_bgColor) !important;
 }
