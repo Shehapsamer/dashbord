@@ -913,9 +913,19 @@ table{
 }
 
 
-
-
-
+.email{
+  margin: 20px 0;
+  text-align: center;
+}
+.email img{
+  width: 100px !important;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.email h6{
+  color: var(--bgColor);
+}
 
 
 
