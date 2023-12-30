@@ -4,16 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <link rel="stylesheet" href="vendor/selectFX/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="vendor/jqvmap/dist/jqvmap.min.css">
+
+
+
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/sb-admin-2.min.css">
 </head>
 <body>
+
+    
 <!-- navbar -->
-<div class="navbar">
+<div class="navbar allssssss" id="nasaaaaa">
     <input type="checkbox" id="nav-check">
     <div class="nav-header">
         <div class="nav-logo nav-logo-h1">
-          <h1 class="">الاحصائيات</h1>
+
+<div onclick="open_edit_box  ()" class="toglle_menu_large" id="toglle_menu_large">
+    <i class="fa-solid fa-bars"></i>
+</div>
+
+
         </div>
     </div>
     <div class="nav-btn">
@@ -26,24 +42,60 @@
 
     <div class="nav-links">
 
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <li class="admin_img">
+            <img src="./img/user.jpeg" alt="">
+            <h6>ahmed samer</h6>
+        </li>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="./Edit_account.html">تعديل الحساب</a></li>
+        <li><a class="dropdown-item" href="./logIn.html">تسجيل خروج</a></li>
+    </ul>
+</div> 
 
 
-        <a href="./Edit_account.html">تعديل حساب</a>
-        <a href="./logIn.html">تسجيل خروج</a>
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fa-solid fa-bell"></i>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+</div>
+
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fa-regular fa-envelope"></i>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+</div>
+
+            <div class="aa">
+                <input type="text" placeholder="ابحث">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
 
     </div>
 </div>
 
 <!-- Sidebar menu -->
-    <div class="toglle_menu" id="toglle_menu">
-        <i class="fa-solid fa-bars"></i>
-    </div>
+<div class="toglle_menu" id="toglle_menu">
+    <i class="fa-solid fa-bars"></i>
+</div>
+
+
 <section class="nav_sidebar" id="nav_sidebar">
 
-        <li class="admin_img">
-            <img src="./img/user.jpeg" alt="">
-            <h6>MR.ahmed@gmail.com</h6>
-        </li>
+
 
 
     <ul class="nav_sidebar_links">
@@ -73,6 +125,7 @@
 
         
     </ul>
+    
 </section>
 
 
@@ -86,8 +139,36 @@
 
     
 
-    <div class="col-lg-10">
-        <input class="slecte_date" type="date"  value="2023-12-27"  >
+    <div id="allssssss" class=" col-lg-12 allssssss ">
+
+<div class="cleandars">
+            <input class="slecte_date" type="date" value="2023-12-27">
+            <input class="slecte_date" type="date" value="2023-12-27">
+</div>
+
+<div class="breadcrumbs">
+    <div class="col-sm-4">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <h1>لوحه القياده</h1>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="page-header float-right">
+            <div class="page-title">
+                <ol class="breadcrumb text-right">
+                    <li class="active">لوحه القياده</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 5555 -->
+
+
+
+
 
 <!-- <div class="firsty">
 <div class="row">
@@ -357,6 +438,625 @@
 
 
 
+<div class="row">
+    <div class="col-xl-6">
+    <div class="card">
+        <div class="card-header">
+            <h4>العالم</h4>
+        </div>
+        <div class="Vector-map-js">
+            <div id="vmap" class="vmap" style="height: 265px;"></div>
+        </div>
+    </div>
+    <!-- /# card -->
+    </div>
+
+
+    <div class="col-xl-6">
+    <div class="card mb-4">
+        <div class="card-header">
+            نظره عن الارباح السنويه
+            <i class="fas fa-chart-bar me-1"></i>
+        </div>
+        <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
+    </div>
+    </div>
+</div>
+
+
+<div class="card mb-4">
+    <div class="card-header">
+        قائمه الموظفين
+        <i class="fas fa-table me-1"></i>
+    </div>
+    <div class="card-body">
+        <table id="datatablesSimple">
+            <thead>
+                <tr>
+                    <th>الاسم</th>
+                    <th>الوظيفه</th>
+                    <th>العنوان</th>
+                    <th>العمر</th>
+                    <th>تاريخ البدء</th>
+                    <th>الراتب</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th>الاسم</th>
+                    <th>الوظيفه</th>
+                    <th>العنوان</th>
+                    <th>العمر</th>
+                    <th>تاريخ البدء</th>
+                    <th>الراتب</th>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>احمد سمير</td>
+                    <td> فني كاميرات </td>
+                    <td>شبرا مصر</td>
+                    <td>30</td>
+                    <td>2011/04/25</td>
+                    <td>10.000</td>
+                </tr>
+                <tr>
+                    <td>محمد محمود</td>
+                    <td>مصمم دزاين</td>
+                    <td>المعادي</td>
+                    <td>27</td>
+                    <td>2011/07/25</td>
+                    <td>17.000</td>
+                </tr>
+                <tr>
+                    <td>اكرم توفيق</td>
+                    <td>مهندس كمبيوتر</td>
+                    <td>اكتوبر</td>
+                    <td>36</td>
+                    <td>2009/01/12</td>
+                    <td>36.000</td>
+                </tr>
+                <tr>
+                    <td>شادي محمد</td>
+                    <td>مبرمج</td>
+                    <td>التجمع الخامس</td>
+                    <td>24</td>
+                    <td>2012/03/29</td>
+                    <td>13.500</td>
+                </tr>
+                <tr>
+                    <td>احمد سمير</td>
+                    <td> فني كاميرات </td>
+                    <td>شبرا مصر</td>
+                    <td>30</td>
+                    <td>2011/04/25</td>
+                    <td>10.000</td>
+                </tr>
+                <tr>
+                    <td>محمد محمود</td>
+                    <td>مصمم دزاين</td>
+                    <td>المعادي</td>
+                    <td>27</td>
+                    <td>2011/07/25</td>
+                    <td>17.000</td>
+                </tr>
+                <tr>
+                    <td>اكرم توفيق</td>
+                    <td>مهندس كمبيوتر</td>
+                    <td>اكتوبر</td>
+                    <td>36</td>
+                    <td>2009/01/12</td>
+                    <td>36.000</td>
+                </tr>
+                <tr>
+                    <td>شادي محمد</td>
+                    <td>مبرمج</td>
+                    <td>التجمع الخامس</td>
+                    <td>24</td>
+                    <td>2012/03/29</td>
+                    <td>13.500</td>
+                </tr>
+                <tr>
+                    <td>احمد سمير</td>
+                    <td> فني كاميرات </td>
+                    <td>شبرا مصر</td>
+                    <td>30</td>
+                    <td>2011/04/25</td>
+                    <td>10.000</td>
+                </tr>
+                <tr>
+                    <td>محمد محمود</td>
+                    <td>مصمم دزاين</td>
+                    <td>المعادي</td>
+                    <td>27</td>
+                    <td>2011/07/25</td>
+                    <td>17.000</td>
+                </tr>
+                <tr>
+                    <td>اكرم توفيق</td>
+                    <td>مهندس كمبيوتر</td>
+                    <td>اكتوبر</td>
+                    <td>36</td>
+                    <td>2009/01/12</td>
+                    <td>36.000</td>
+                </tr>
+                <tr>
+                    <td>شادي محمد</td>
+                    <td>مبرمج</td>
+                    <td>التجمع الخامس</td>
+                    <td>24</td>
+                    <td>2012/03/29</td>
+                    <td>13.500</td>
+                </tr>
+                <tr>
+                    <td>احمد سمير</td>
+                    <td> فني كاميرات </td>
+                    <td>شبرا مصر</td>
+                    <td>30</td>
+                    <td>2011/04/25</td>
+                    <td>10.000</td>
+                </tr>
+                <tr>
+                    <td>محمد محمود</td>
+                    <td>مصمم دزاين</td>
+                    <td>المعادي</td>
+                    <td>27</td>
+                    <td>2011/07/25</td>
+                    <td>17.000</td>
+                </tr>
+                <tr>
+                    <td>اكرم توفيق</td>
+                    <td>مهندس كمبيوتر</td>
+                    <td>اكتوبر</td>
+                    <td>36</td>
+                    <td>2009/01/12</td>
+                    <td>36.000</td>
+                </tr>
+                <tr>
+                    <td>شادي محمد</td>
+                    <td>مبرمج</td>
+                    <td>التجمع الخامس</td>
+                    <td>24</td>
+                    <td>2012/03/29</td>
+                    <td>13.500</td>
+                </tr>
+                <tr>
+                    <td>احمد سمير</td>
+                    <td> فني كاميرات </td>
+                    <td>شبرا مصر</td>
+                    <td>30</td>
+                    <td>2011/04/25</td>
+                    <td>10.000</td>
+                </tr>
+                <tr>
+                    <td>محمد محمود</td>
+                    <td>مصمم دزاين</td>
+                    <td>المعادي</td>
+                    <td>27</td>
+                    <td>2011/07/25</td>
+                    <td>17.000</td>
+                </tr>
+                <tr>
+                    <td>اكرم توفيق</td>
+                    <td>مهندس كمبيوتر</td>
+                    <td>اكتوبر</td>
+                    <td>36</td>
+                    <td>2009/01/12</td>
+                    <td>36.000</td>
+                </tr>
+                <tr>
+                    <td>شادي محمد</td>
+                    <td>مبرمج</td>
+                    <td>التجمع الخامس</td>
+                    <td>24</td>
+                    <td>2012/03/29</td>
+                    <td>13.500</td>
+                </tr>
+                <tr>
+                    <td>احمد سمير</td>
+                    <td> فني كاميرات </td>
+                    <td>شبرا مصر</td>
+                    <td>30</td>
+                    <td>2011/04/25</td>
+                    <td>10.000</td>
+                </tr>
+                <tr>
+                    <td>محمد محمود</td>
+                    <td>مصمم دزاين</td>
+                    <td>المعادي</td>
+                    <td>27</td>
+                    <td>2011/07/25</td>
+                    <td>17.000</td>
+                </tr>
+                <tr>
+                    <td>اكرم توفيق</td>
+                    <td>مهندس كمبيوتر</td>
+                    <td>اكتوبر</td>
+                    <td>36</td>
+                    <td>2009/01/12</td>
+                    <td>36.000</td>
+                </tr>
+                <tr>
+                    <td>شادي محمد</td>
+                    <td>مبرمج</td>
+                    <td>التجمع الخامس</td>
+                    <td>24</td>
+                    <td>2012/03/29</td>
+                    <td>13.500</td>
+                </tr>
+                <tr>
+                    <td>احمد سمير</td>
+                    <td> فني كاميرات </td>
+                    <td>شبرا مصر</td>
+                    <td>30</td>
+                    <td>2011/04/25</td>
+                    <td>10.000</td>
+                </tr>
+                <tr>
+                    <td>محمد محمود</td>
+                    <td>مصمم دزاين</td>
+                    <td>المعادي</td>
+                    <td>27</td>
+                    <td>2011/07/25</td>
+                    <td>17.000</td>
+                </tr>
+                <tr>
+                    <td>اكرم توفيق</td>
+                    <td>مهندس كمبيوتر</td>
+                    <td>اكتوبر</td>
+                    <td>36</td>
+                    <td>2009/01/12</td>
+                    <td>36.000</td>
+                </tr>
+                <tr>
+                    <td>شادي محمد</td>
+                    <td>مبرمج</td>
+                    <td>التجمع الخامس</td>
+                    <td>24</td>
+                    <td>2012/03/29</td>
+                    <td>13.500</td>
+                </tr>
+                <tr>
+                    <td>احمد سمير</td>
+                    <td> فني كاميرات </td>
+                    <td>شبرا مصر</td>
+                    <td>30</td>
+                    <td>2011/04/25</td>
+                    <td>10.000</td>
+                </tr>
+                <tr>
+                    <td>محمد محمود</td>
+                    <td>مصمم دزاين</td>
+                    <td>المعادي</td>
+                    <td>27</td>
+                    <td>2011/07/25</td>
+                    <td>17.000</td>
+                </tr>
+                <tr>
+                    <td>اكرم توفيق</td>
+                    <td>مهندس كمبيوتر</td>
+                    <td>اكتوبر</td>
+                    <td>36</td>
+                    <td>2009/01/12</td>
+                    <td>36.000</td>
+                </tr>
+                <tr>
+                    <td>شادي محمد</td>
+                    <td>مبرمج</td>
+                    <td>التجمع الخامس</td>
+                    <td>24</td>
+                    <td>2012/03/29</td>
+                    <td>13.500</td>
+                </tr>
+                <tr>
+                    <td>احمد سمير</td>
+                    <td> فني كاميرات </td>
+                    <td>شبرا مصر</td>
+                    <td>30</td>
+                    <td>2011/04/25</td>
+                    <td>10.000</td>
+                </tr>
+                <tr>
+                    <td>محمد محمود</td>
+                    <td>مصمم دزاين</td>
+                    <td>المعادي</td>
+                    <td>27</td>
+                    <td>2011/07/25</td>
+                    <td>17.000</td>
+                </tr>
+                <tr>
+                    <td>اكرم توفيق</td>
+                    <td>مهندس كمبيوتر</td>
+                    <td>اكتوبر</td>
+                    <td>36</td>
+                    <td>2009/01/12</td>
+                    <td>36.000</td>
+                </tr>
+                <tr>
+                    <td>شادي محمد</td>
+                    <td>مبرمج</td>
+                    <td>التجمع الخامس</td>
+                    <td>24</td>
+                    <td>2012/03/29</td>
+                    <td>13.500</td>
+                </tr>
+                <tr>
+                    <td>احمد سمير</td>
+                    <td> فني كاميرات </td>
+                    <td>شبرا مصر</td>
+                    <td>30</td>
+                    <td>2011/04/25</td>
+                    <td>10.000</td>
+                </tr>
+                <tr>
+                    <td>محمد محمود</td>
+                    <td>مصمم دزاين</td>
+                    <td>المعادي</td>
+                    <td>27</td>
+                    <td>2011/07/25</td>
+                    <td>17.000</td>
+                </tr>
+                <tr>
+                    <td>اكرم توفيق</td>
+                    <td>مهندس كمبيوتر</td>
+                    <td>اكتوبر</td>
+                    <td>36</td>
+                    <td>2009/01/12</td>
+                    <td>36.000</td>
+                </tr>
+                <tr>
+                    <td>شادي محمد</td>
+                    <td>مبرمج</td>
+                    <td>التجمع الخامس</td>
+                    <td>24</td>
+                    <td>2012/03/29</td>
+                    <td>13.500</td>
+                </tr>
+                <tr>
+                    <td>احمد سمير</td>
+                    <td> فني كاميرات </td>
+                    <td>شبرا مصر</td>
+                    <td>30</td>
+                    <td>2011/04/25</td>
+                    <td>10.000</td>
+                </tr>
+                <tr>
+                    <td>محمد محمود</td>
+                    <td>مصمم دزاين</td>
+                    <td>المعادي</td>
+                    <td>27</td>
+                    <td>2011/07/25</td>
+                    <td>17.000</td>
+                </tr>
+                <tr>
+                    <td>اكرم توفيق</td>
+                    <td>مهندس كمبيوتر</td>
+                    <td>اكتوبر</td>
+                    <td>36</td>
+                    <td>2009/01/12</td>
+                    <td>36.000</td>
+                </tr>
+                <tr>
+                    <td>شادي محمد</td>
+                    <td>مبرمج</td>
+                    <td>التجمع الخامس</td>
+                    <td>24</td>
+                    <td>2012/03/29</td>
+                    <td>13.500</td>
+                </tr>
+                <tr>
+                    <td>احمد سمير</td>
+                    <td> فني كاميرات </td>
+                    <td>شبرا مصر</td>
+                    <td>30</td>
+                    <td>2011/04/25</td>
+                    <td>10.000</td>
+                </tr>
+                <tr>
+                    <td>محمد محمود</td>
+                    <td>مصمم دزاين</td>
+                    <td>المعادي</td>
+                    <td>27</td>
+                    <td>2011/07/25</td>
+                    <td>17.000</td>
+                </tr>
+                <tr>
+                    <td>اكرم توفيق</td>
+                    <td>مهندس كمبيوتر</td>
+                    <td>اكتوبر</td>
+                    <td>36</td>
+                    <td>2009/01/12</td>
+                    <td>36.000</td>
+                </tr>
+                <tr>
+                    <td>شادي محمد</td>
+                    <td>مبرمج</td>
+                    <td>التجمع الخامس</td>
+                    <td>24</td>
+                    <td>2012/03/29</td>
+                    <td>13.500</td>
+                </tr>
+                <tr>
+                    <td>احمد سمير</td>
+                    <td> فني كاميرات </td>
+                    <td>شبرا مصر</td>
+                    <td>30</td>
+                    <td>2011/04/25</td>
+                    <td>10.000</td>
+                </tr>
+                <tr>
+                    <td>محمد محمود</td>
+                    <td>مصمم دزاين</td>
+                    <td>المعادي</td>
+                    <td>27</td>
+                    <td>2011/07/25</td>
+                    <td>17.000</td>
+                </tr>
+                <tr>
+                    <td>اكرم توفيق</td>
+                    <td>مهندس كمبيوتر</td>
+                    <td>اكتوبر</td>
+                    <td>36</td>
+                    <td>2009/01/12</td>
+                    <td>36.000</td>
+                </tr>
+                <tr>
+                    <td>شادي محمد</td>
+                    <td>مبرمج</td>
+                    <td>التجمع الخامس</td>
+                    <td>24</td>
+                    <td>2012/03/29</td>
+                    <td>13.500</td>
+                </tr>
+                <tr>
+                    <td>احمد سمير</td>
+                    <td> فني كاميرات </td>
+                    <td>شبرا مصر</td>
+                    <td>30</td>
+                    <td>2011/04/25</td>
+                    <td>10.000</td>
+                </tr>
+                <tr>
+                    <td>محمد محمود</td>
+                    <td>مصمم دزاين</td>
+                    <td>المعادي</td>
+                    <td>27</td>
+                    <td>2011/07/25</td>
+                    <td>17.000</td>
+                </tr>
+                <tr>
+                    <td>اكرم توفيق</td>
+                    <td>مهندس كمبيوتر</td>
+                    <td>اكتوبر</td>
+                    <td>36</td>
+                    <td>2009/01/12</td>
+                    <td>36.000</td>
+                </tr>
+                <tr>
+                    <td>شادي محمد</td>
+                    <td>مبرمج</td>
+                    <td>التجمع الخامس</td>
+                    <td>24</td>
+                    <td>2012/03/29</td>
+                    <td>13.500</td>
+                </tr>
+                <tr>
+                    <td>احمد سمير</td>
+                    <td> فني كاميرات </td>
+                    <td>شبرا مصر</td>
+                    <td>30</td>
+                    <td>2011/04/25</td>
+                    <td>10.000</td>
+                </tr>
+
+
+
+
+
+
+
+
+
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+<div class="row">
+
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="mb-3">نظره عن المرتبات السنويه </h4>
+                <canvas id="sales-chart"></canvas>
+            </div>
+        </div>
+    </div><!-- /# column -->
+
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="mb-3"> نظره عن اعضاء الفريق </h4>
+                <canvas id="team-chart"></canvas>
+            </div>
+        </div>
+    </div><!-- /# column -->
+
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="mb-3"> نظره عن الصادر و الوارد الشهري </h4>
+                <canvas id="barChart"></canvas>
+            </div>
+        </div>
+    </div><!-- /# column -->
+
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="mb-3">نظره عن مصاريف الشركه </h4>
+                <canvas id="radarChart"></canvas>
+            </div>
+        </div>
+    </div><!-- /# column -->
+
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="mb-3">نظره عن الصادر و الوارد السنوي </h4>
+                <canvas id="lineChart"></canvas>
+            </div>
+        </div>
+
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="mb-3">تقييم الرحلات السنوي</h4>
+                    <canvas id="doughutChart"></canvas>
+                </div>
+            </div>
+        </div><!-- /# column -->
+
+    </div><!-- /# column -->
+
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="mb-3">تفاصيل الوارد </h4>
+                <canvas id="pieChart"></canvas>
+            </div>
+        </div>
+    </div><!-- /# column -->
+
+
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="mb-3">تفاصيل الصادر </h4>
+                <canvas id="polarChart"></canvas>
+            </div>
+        </div>
+    </div><!-- /# column -->
+
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="mb-3">تطور عدد الرحلات  </h4>
+                <canvas id="singelBarChart"></canvas>
+            </div>
+        </div>
+    </div><!-- /# column -->
+
+
+
+</div>
+
+
+
+
 
 </div>
 
@@ -365,13 +1065,39 @@
 
 </div>
 
-<h1 id="jan">
-    مارس
-</h1>
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="d-none">
+
+<input id="jan" type="text" value="0">
+<input id="Feb" type="text" value="10000">
+<input id="Mar" type="text" value="20000">
+<input id="Apr" type="text" value="15000">
+<input id="May" type="text" value="250000">
+<input id="Jun" type="text" value="30000">
+<input id="Jul" type="text" value="10000">
+<input id="Aug" type="text" value="40000">
+<input id="Sept" type="text" value="15000">
+<input id="Oct" type="text" value="1800000">
+
+<input id="Dec" type="text" value="80000">
+
+<h1 id="Nov"  type="text" data-myVal="50000" value=""></h1>    
+</div>
 
 <div id="open_form_adding" class="d-none">
 
@@ -388,18 +1114,58 @@
 <div id="form_adding_order" class="d-none"></div></div>
 </div>
 
-<script src="js/jquery-3.5.1.min.js"></script>
+
+
+<script src="./js/1.JS"></script>
+
+
+<!--  Chart js الباقي -->
+<script src="vendor/jquery/dist/jquery.min.js"></script>
+<script src="assets/js/init-scripts/chart-js/chartjs-init.js"></script>
+
+
 <script src="./js/all.min.js"></script>
 <script src="./js/bootstrap.bundle.min.js"></script>
-<script src="js/sb-admin-2.min.js"></script>
+
 <!-- Page level plugins -->
 <script src="vendor/chart.js/Chart.min.js"></script>
-<!-- Page level custom scripts -->
+
+<!-- سيكشن 1 بياني -->
 <script src="js/demo/chart-area-demo.js"></script>
 <script src="js/demo/chart-pie-demo.js"></script>
+
+<!-- الجدو -->
+<script src="js/datatables-simple-demo.js"></script>
+<script src="assets/js/main.js"></script>
+
+<!-- خريطه -->
+<script src="vendor/jqvmap/dist/jquery.vmap.min.js"></script>
+<script src="vendor/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+<script src="vendor/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+
+
+<!-- سكريبت الرئيسي -->
+
 <script src="./js/main.js"></script>
 
+<script>
+    (function ($) {
+            "use strict";
 
+            jQuery('#vmap').vectorMap({
+                map: 'world_en',
+                backgroundColor: null,
+                color: '#ffffff',
+                hoverOpacity: 0.7,
+                selectedColor: '#1de9b6',
+                enableZoom: true,
+                showTooltip: true,
+                values: sample_data,
+                scaleColors: ['#1de9b6', '#03a9f5'],
+                normalizeFunction: 'polynomial'
+            });
+        })(jQuery);
+    </script>
 
 </body>
 </html>

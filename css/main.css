@@ -79,7 +79,8 @@ p{
 .navbar {
   height: 75px;
   width: 100%;
-  background-color: transparent;
+  background-color: var(--main_bgColor);
+  box-shadow: 1px 1px 10px 1px #00000047;
   padding: 0 5%;  
   display: flex;
   align-items: center;
@@ -97,15 +98,23 @@ p{
   font-size: 22px;
   color: #000;
   width: 100%;
-  margin-right: 200px ;
 }
-.nav-logo-h1{
-  margin-right: 100px !important;
+.navbar .aa input{
+  height: 40px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: var(--bgColor);
+  border: var(--main_borderColor);
+  padding-right: 10px;
 }
-
-
-.navbar .nav-header .nav-logo h1{
-  font-size: 28px;
+.navbar .aa button{
+  height: 40px;
+  padding: 0 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: var(--btnColor);
+  border: var(--main_borderColor);
+  color: var(--bgColor);
 }
 .navbar .nav-btn {
   display: none;
@@ -116,8 +125,60 @@ p{
 .navbar  .nav-links {
   margin-right: auto;
   font-size: 18px;
+  display: flex;
+
+}
+.navbar .nav-links .dropdown{
+  margin-left: 10px;
+  display: flex !important;
+}
+.navbar .nav-links .dropdown-toggle:focus{
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.navbar .nav-links .dropdown-toggle::after{
+content: '';
+display: none !important;
+}
+.admin_img {
+  text-align: center;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+  border-left: 1px solid #8e8d8d;
+  padding-left: 10px !important;
 }
 
+.admin_img img {
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  text-align: center;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+.admin_img h6 {
+  color: var(--body_bgColor);
+}
+
+
+
+
+
+
+
+
+
+
+
+.navbar .nav-links .dropdown button{
+  background-color: transparent;
+  color: var(--body_bgColor);
+  border: none;
+}
 .navbar  .nav-links  a , .navbar .nav-links li{
   display: inline-block;
   padding: 13px 10px 13px 10px;
@@ -308,26 +369,12 @@ p{
   width: 200px;
   background-color: var(--Secondary-color);
   z-index: 80000000000000000000000000008;
+  transition: all ease-in-out .2s;
+  overflow-x: hidden !important;
   overflow-y: scroll;
 }
 .nav_sidebar::-webkit-scrollbar{
   width: 1px !important;
-}
-.admin_img {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.admin_img img {
-  width: 70px;
-  height: 70px;
-  margin: auto;
-  text-align: center;
-  border-radius: 50%;
-}
-.admin_img h6{
-  color: var(--main_bgColor);
-  margin-top: 10px;
 }
 
 .nav_sidebar .collapse a {
@@ -634,7 +681,9 @@ p{
 .navbar .nav-header .nav-logo {
   margin-right: 50px !important;
 }
-
+.cleandars{
+  flex-direction: column;
+}
  }
 
 
@@ -754,8 +803,14 @@ p{
 .box1{
   margin-top: -20px;
 }
+.cleandars{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
 .slecte_date{
-  width: 80%;
+  width: 40%;
   display: block;
   margin: auto;
   height: 40px;
@@ -763,7 +818,21 @@ p{
   border-radius: 5px;
   padding: 0 20px;
   margin-bottom: 30px;
+  margin: 10px ;
+  background-color: var(--main_bgColor);
 }
+
+input[type="date"]::-webkit-calendar-picker-indicator{
+    opacity: 1;
+    color: rgba(0, 0, 0, 0);
+    background-image: url(../img/images.jpeg);
+    height: 93%;
+    width: 2.8rem;
+    z-index: 0;
+    cursor: pointer;
+}
+
+
 .toglle_menu{
   display: none !important;
 }
@@ -774,63 +843,6 @@ p{
 
 
 
-
-@media (max-width:1024px) {
-  .nav_sidebar {
-    width: 0 !important;
-    overflow: hidden;
-    transition: all ease-in .3s;
-    padding-top: 50px;
-  }
-  .toglle_menu{
-    display: block !important;
-    position: fixed;
-    top: 2%;
-    right: 10px;
-    border-radius: 5px;
-    background-color: var(--btnColor);
-    z-index: 44161556151566615616516516516351651651651516165;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    padding: 10px;
-  }
-  .toglle_menu svg{
-    font-size: 30px;
-    color: var(--bgColor);
-  }
-.open_nav_sidebar{
-  width: 200px !important;
-  z-index: 12212121;
-}
-.navbar>.nav-btn>label{
-  background-color: var(--btnColor);
-  border-radius: 5px;
-
-}
-
-.firsty .box{
-  margin: 20px 0;
-}
-.table_container {
-  overflow-x: scroll !important;
-}
-.edit_table .edit_table_form{
-  width: 80%;
-}
-.Show {
-  height: 700px !important;
-}
-.Home {
-  padding-right: 5%;
-}
-}
-
- @media screen and (min-width:1px) and (max-width:1200px) {
-  .Home{
-    padding-right: 5%;
-  }
- }
 
 
 
@@ -869,4 +881,110 @@ td {
 table{
   padding: 0 20px !important;
   border-radius: 5px ;
+}
+
+.toglle_menu_large{
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  background-color: var(--btnColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+.toglle_menu_large svg{
+  color: var(--bgColor);
+  font-size: 30px;
+  
+}
+
+.nav_sidebar-colse{
+  width: 0 !important;
+}
+
+.allssssss{
+  padding-right: 18% !important ;
+  transition: all ease-in-out .3s ;
+}
+
+.sssaaaaddff{
+  padding-right: 5% !important;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width:1024px) {
+  .nav_sidebar {
+    width: 0 !important;
+    overflow: hidden;
+    transition: all ease-in .3s;
+    padding-top: 50px;
+  }
+
+  .toglle_menu {
+    display: block !important;
+    position: fixed;
+    top: 1%;
+    right: 10px;
+    border-radius: 5px;
+    background-color: var(--btnColor);
+    z-index: 44161556151566615616516516516351651651651516165;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+  }
+
+  .toglle_menu svg {
+    font-size: 30px;
+    color: var(--bgColor);
+  }
+
+  .open_nav_sidebar {
+    width: 200px !important;
+    z-index: 12212121;
+  }
+
+  .navbar>.nav-btn>label {
+    background-color: var(--btnColor);
+    border-radius: 5px;
+
+  }
+
+  .firsty .box {
+    margin: 20px 0;
+  }
+
+  .table_container {
+    overflow-x: scroll !important;
+  }
+
+  .edit_table .edit_table_form {
+    width: 80%;
+  }
+
+  .Show {
+    height: 700px !important;
+  }
+
+
+    .allssssss {
+      padding-right: 5% !important;
+    }
+.toglle_menu_large {
+  display: none !important;
+}
+}
+
+@media screen and (min-width:1024px) and (max-width:1200px) {
+.allssssss {
+  padding-right: 20% !important;
+}
 }

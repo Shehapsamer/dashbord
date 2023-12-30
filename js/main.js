@@ -46,3 +46,22 @@ function close_edit_box  () {
 }
 
 
+let toglle_menu_large = document.getElementById("toglle_menu_large");
+
+
+toglle_menu_large.addEventListener("click", function () {
+    nav_sidebar.classList.toggle("nav_sidebar-colse")
+})
+
+let allssssss = document.getElementById("allssssss");
+
+
+toglle_menu_large.addEventListener("click", function () {
+    allssssss.classList.toggle("sssaaaaddff")
+})
+
+function open_edit_box  () {
+    let nasaaaaa = document.getElementById("nasaaaaa");
+
+    nasaaaaa.classList.toggle("sssaaaaddff")
+}

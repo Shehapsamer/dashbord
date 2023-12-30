@@ -10,11 +10,16 @@
 
     <body>
 <!-- navbar -->
-<div class="navbar">
+<div class="navbar allssssss" id="nasaaaaa">
     <input type="checkbox" id="nav-check">
     <div class="nav-header">
-        <div class="nav-logo">
-            <h1 class="">الاحصائيات</h1>
+        <div class="nav-logo nav-logo-h1">
+
+            <div onclick="open_edit_box  ()" class="toglle_menu_large" id="toglle_menu_large">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+
         </div>
     </div>
     <div class="nav-btn">
@@ -27,10 +32,50 @@
 
     <div class="nav-links">
 
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <li class="admin_img">
+                    <img src="./img/user.jpeg" alt="">
+                    <h6>ahmed samer</h6>
+                </li>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./Edit_account.html">تعديل الحساب</a></li>
+                <li><a class="dropdown-item" href="./logIn.html">تسجيل خروج</a></li>
+            </ul>
+        </div>
 
 
-        <a href="./Edit_account.html">تعديل حساب</a>
-        <a href="./logIn.html">تسجيل خروج</a>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="fa-solid fa-bell"></i>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="fa-regular fa-envelope"></i>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+
+        <div class="aa">
+            <input type="text" placeholder="ابحث">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
 
     </div>
 </div>
@@ -39,12 +84,11 @@
 <div class="toglle_menu" id="toglle_menu">
     <i class="fa-solid fa-bars"></i>
 </div>
+
+
 <section class="nav_sidebar" id="nav_sidebar">
 
-    <li class="admin_img">
-        <img src="./img/user.jpeg" alt="">
-        <h6>MR.ahmed@gmail.com</h6>
-    </li>
+
 
 
     <ul class="nav_sidebar_links">
@@ -74,7 +118,9 @@
 
 
     </ul>
+
 </section>
+
 
 
 
@@ -86,7 +132,7 @@
 
 </div>
 
-<div class="col-lg-10">
+<div  id="allssssss" class=" col-lg-12 allssssss ">
 
 
 <div class="add_staff" id="form_adding_order">

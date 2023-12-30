@@ -28,8 +28,24 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 }
 
 // Area Chart Example
+
 var ctx = document.getElementById("myAreaChart");
+
+jan = document.getElementById("jan").value
+Feb = document.getElementById("Feb").value
+Mar = document.getElementById("Mar").value
+Apr = document.getElementById("Apr").value
+May = document.getElementById("May").value
+Jun = document.getElementById("Jun").value
+Jul = document.getElementById("Jul").value
+Aug = document.getElementById("Aug").value
+Sept = document.getElementById("Sept").value
+Oct = document.getElementById("Oct").value
+Nov = document.getElementById("Nov").getAttribute("data-myVal")
+Dec = document.getElementById("Dec").value
+
 var myLineChart = new Chart(ctx, {
+
   type: 'line',
   data: {
     labels: ["يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر"],
@@ -46,7 +62,8 @@ var myLineChart = new Chart(ctx, {
       pointHoverBorderColor: "rgba(78, 115, 223, 1)",
       pointHitRadius: 10,
       pointBorderWidth: 2,
-      data: [0, 10000, 5000, 15000, 10000, 20000, 15000, 25000, 20000, 30000, 10000, 50000],
+      data: [jan, Feb, Mar, Apr , May, Jun, Jul, Aug, Sept, Oct, Nov , Dec] ,
+      marc: 20000,
     }],
   },
   options: {
